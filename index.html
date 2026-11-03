@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House of the Dragon — David's Edition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">A fantasy arcade adventure</p>
+      <h1>HOUSE OF THE DRAGON</h1>
+      <p class="subtitle">David's Edition <span>◆</span> Collect gold. Dodge danger. Claim the skies.</p>
+    </header>
+    <section class="game-panel" aria-label="Dragon game">
+      <div class="hud">
+        <div><span class="hud-label">SCORE</span><strong id="score">0</strong></div>
+        <div><span class="hud-label">LEVEL</span><strong id="level">1 / 3</strong></div>
+        <div><span class="hud-label">LIVES</span><strong id="lives">♥ ♥ ♥</strong></div>
+        <div><span class="hud-label">BEST</span><strong id="best">0</strong></div>
+      </div>
+      <div class="canvas-wrap"><canvas id="gameCanvas" width="800" height="500" aria-label="Game play area"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-card"><p class="overlay-kicker">YOUR LEGEND BEGINS</p><h2 id="overlayTitle">Take to the skies</h2><p id="overlayText">Collect gold and avoid the enemy towers. Every 100 points unlocks a harder realm.</p><button id="startBtn">START GAME</button></div>
+        </div>
+      </div>
+      <div class="game-footer"><span>↑ / ↓ or W / S to fly</span><span>Collect ✦ gold • Avoid 🔥 hazards</span><button id="pauseBtn" class="secondary-btn">PAUSE</button></div>
+    </section>
+    <section class="how-to">
+      <div class="how-icon">✦</div><div><h2>How to play</h2><p>Move up and down to collect gold. Reach <b>100 points</b> to enter the next level. Each realm makes hazards move faster and changes the scenery. You have three lives—good luck, dragon rider.</p></div>
+    </section>
+    <footer>Designed and coded by David · House of the Dragon Game</footer>
+  </main>
+  <script src="ai-agent.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
